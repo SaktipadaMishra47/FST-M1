@@ -1,9 +1,48 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<suite name="ExampleSuite" >
-    <test name="SuiteTests" >
-        <classes>
-            <class name="suiteExample.DemoOne"/>
-            <class name="suiteExample.DemoTwo"/>
-        </classes>
-    </test>
+<suite name="SeleniumTestSuite">
+
+  <!-- Run all the tests -->
+  <test name="AllTests">
+    <classes>
+      <class name="suiteExample.Activity5" />
+      <class name="suiteExample.DemoOne" />
+      <class name="suiteExample.DemoTwo" />
+    </classes>
+  </test>
+
+  <!-- Run only the tests that are in the HeaderTests group -->
+  <test name="HeaderTestsOnly">
+    <groups>
+      <run>
+        <include name="HeaderTests" />
+      </run>
+    </groups>
+    <classes>
+      <class name="suiteExample.Activity5" />
+    </classes>
+  </test>
+
+  <!-- Run only the tests that are in the ButtonTests group -->
+  <test name="ButtonTestsOnly">
+    <groups>
+      <run>
+        <include name="ButtonTests" />
+      </run>
+    </groups>
+    <classes>
+      <class name="suiteExample.Activity5" />
+    </classes>
+  </test>
+
+  <!-- Exclude the tests that are in the HeaderTests group -->
+  <test name="ExcludeHeaderTests">
+    <groups>
+      <run>
+        <exclude name="HeaderTests" />
+      </run>
+    </groups>
+    <classes>
+      <class name="suiteExample.Activity5" />
+    </classes>
+  </test>
+
 </suite>
