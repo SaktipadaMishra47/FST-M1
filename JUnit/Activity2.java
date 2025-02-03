@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ExpectedExceptionTest {
 
-    @Test
+    @org.junit.Test
     void notEnoughFunds() {
         // Create an object for BankAccount class
         BankAccount account = new BankAccount(9);
@@ -15,7 +15,7 @@ class ExpectedExceptionTest {
                 "Balance must be greater than amount of withdrawal");
     }
 
-    @Test
+    @org.junit.Test
     void enoughFunds() {
         // Create an object for BankAccount class
         BankAccount account = new BankAccount(100);
