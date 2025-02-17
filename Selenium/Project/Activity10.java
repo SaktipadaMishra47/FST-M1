@@ -14,7 +14,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class Activity10 {
+public class Activity5 {
     WebDriver driver;
 
     // Setup function
