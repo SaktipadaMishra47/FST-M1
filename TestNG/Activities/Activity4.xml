@@ -1,0 +1,51 @@
+<suite name="SeleniumTestSuite" parallel="classes">
+    <parameter name="username" value="admin" />
+    <parameter name="password" value="password" />
+  <!-- Run all the tests -->
+  <test name="AllTests">
+    <classes>
+      <class name="suiteExample.Activity5" />
+      <class name="suiteExample.Activity4" />
+      <class name="suiteExample.DemoTwo" />
+      <class name="Activity6" />
+      <class name="Activity7" />
+    </classes>
+  </test>
+
+  <!-- Run only the tests that are in the HeaderTests group -->
+  <test name="HeaderTestsOnly">
+    <groups>
+      <run>
+        <include name="HeaderTests" />
+      </run>
+    </groups>
+    <classes>
+      <class name="suiteExample.Activity5" />
+    </classes>
+  </test>
+
+  <!-- Run only the tests that are in the ButtonTests group -->
+  <test name="ButtonTestsOnly">
+    <groups>
+      <run>
+        <include name="ButtonTests" />
+      </run>
+    </groups>
+    <classes>
+      <class name="suiteExample.Activity5" />
+    </classes>
+  </test>
+
+  <!-- Exclude the tests that are in the HeaderTests group -->
+  <test name="ExcludeHeaderTests">
+    <groups>
+      <run>
+        <exclude name="HeaderTests" />
+      </run>
+    </groups>
+    <classes>
+      <class name="suiteExample.Activity5" />
+    </classes>
+  </test>
+
+</suite>
