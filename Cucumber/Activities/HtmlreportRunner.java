@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
     features = "Features",
     glue = {"stepDefinitions"},
-    tags = "@SimpleAlert",
+    tags = "@activity4",
     plugin = {"html: test-reports"},
     monochrome = true
 )
